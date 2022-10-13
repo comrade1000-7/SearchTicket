@@ -11,7 +11,7 @@ public class RepositoryTest {
     Ticket ticket5 = new Ticket(5, 13299, "LED", "DXB", 345);
 
     @BeforeEach
-    public void setup() throws Exception {
+    public void setup() {
         repo.saveProduct(ticket1);
         repo.saveProduct(ticket2);
         repo.saveProduct(ticket3);
