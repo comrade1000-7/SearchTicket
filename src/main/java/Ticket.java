@@ -13,6 +13,10 @@ public class Ticket implements Comparable<Ticket>{
         this.timeWay = timeWay;
     }
 
+    public int getTimeWay() {
+        return timeWay;
+    }
+
     public int getId() {
         return id;
     }

@@ -43,4 +43,13 @@ public class ManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void shouldFindTheFastest() {
+        TicketByTimeWay ticketByTimeWay = new TicketByTimeWay();
+        Ticket expected = ticket1;
+        Ticket actual = manager.findAll("SVO", "KZN", ticketByTimeWay);
+
+        Assertions.assertEquals(expected, actual);
+    }
 }

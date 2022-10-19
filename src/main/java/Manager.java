@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Manager {
     private Repository repository;
@@ -25,5 +26,11 @@ public class Manager {
             return result;
         }
         return null;
+    }
+
+    public Ticket findAll (String from, String to, Comparator<Ticket> comparator) {
+        Ticket[] tmp = findAll(from, to);
+        Arrays.sort(tmp, comparator);
+        return tmp[0];
     }
 }
